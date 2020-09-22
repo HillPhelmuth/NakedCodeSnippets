@@ -1,9 +1,4 @@
-﻿public class Student
-{
-    public int StudentID { get; set; }
-    public string StudentName { get; set; }
-    public int Age { get; set; }
-}
+﻿public class Student { public int StudentID { get; set; } public string StudentName { get; set; } public int Age { get;set; } }
 
 List<Student> studentList = new List<Student>() {
             new Student() { StudentID = 1, StudentName = "John", Age = 13},
@@ -15,16 +10,6 @@ List<Student> studentList = new List<Student>() {
 
 public void MainMethod()
 {
-    // Filter objects using .Where. This will return all students Ages 13 - 19.
-    // Lambda expression must return boolean
-    var filteredResult = studentList.Where(s => s.Age > 12 && s.Age < 20).ToList();
-    Console.WriteLine("Filter using .Where()");
-    Console.WriteLine("<br/>=============================================<br/>");
-    foreach (var student in filteredResult)
-    {
-        Console.WriteLine($"ID: {student.StudentID} Name: {student.StudentName} Age: {student.Age}<br/>");
-    }
-    
     // Get the first result using a boolean filter
     var student1 = studentList.FirstOrDefault(x => x.StudentName == "John");
     Console.WriteLine("<br/>=============================================<br/>");
@@ -59,6 +44,15 @@ public void MainMethod()
     foreach (string name in studentNames)
     {
         Console.WriteLine($"{name}<br/>");
+    }
+    // Filter objects using .Where. This will return all students Ages 13 - 19.
+    // Lambda expression must return boolean
+    var filteredResult = studentList.Where(s => s.Age > 12 && s.Age < 20).ToList();
+    Console.WriteLine("Filter using .Where()");
+    Console.WriteLine("<br/>=============================================<br/>");
+    foreach (var student in filteredResult)
+    {
+        Console.WriteLine($"ID: {student.StudentID} Name: {student.StudentName} Age: {student.Age}<br/>");
     }
 
 }
