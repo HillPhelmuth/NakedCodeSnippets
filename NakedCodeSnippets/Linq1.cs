@@ -51,5 +51,15 @@ public void MainMethod()
         Console.WriteLine($"ID: {student3.StudentID} Name: {student3.StudentName} Age: {student3.Age}");
     }
 
+    // Select a property to list using .Select()
+    var studentNames = studentList.Select(x => x.StudentName);
+    Console.WriteLine("=============================================<br/>");
+    Console.WriteLine("Student names only");
+    Console.WriteLine("=============================================<br/>");
+    foreach (string name in studentNames)
+    {
+        Console.WriteLine($"{name}");
+    }
+
 }
 MainMethod();
