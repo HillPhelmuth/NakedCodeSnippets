@@ -24,18 +24,18 @@ public void MainMethod()
     {
         Console.WriteLine($"ID: {student.StudentID} Name: {student.StudentName} Age: {student.Age}");
     }
-Console.WriteLine("<br/>");
-    // Filter object to the first result using a boolean filter
+    Console.WriteLine("<br/>");
+    // Get the first result using a boolean filter
     var student1 = studentList.FirstOrDefault(x => x.StudentName == "John");
     Console.WriteLine("<br/>");
     Console.WriteLine("Filter object to the first result");
     Console.WriteLine("=============================================\r\n");
     Console.WriteLine($"ID: {student1.StudentID} Name: {student1.StudentName} Age: {student1.Age}");
     Console.WriteLine("<br/>");
-    // Order by ascending using .OrderBy
+    // Order by ascending using .OrderBy. Lambda sets determines the property to order by
     var studentsInAscOrder = studentList.OrderBy(s => s.StudentName).ToList();
     Console.WriteLine("Order by ascending");
-Console.WriteLine("<br/>");
+    Console.WriteLine("<br/>");
     foreach (var student2 in filteredResult)
     {
         Console.WriteLine($"ID: {student2.StudentID} Name: {student2.StudentName} Age: {student2.Age}");
@@ -43,7 +43,7 @@ Console.WriteLine("<br/>");
 
     // Order by descending using .OrderByDescending
     var studentsInDescOrder = studentList.OrderByDescending(s => s.Age).ToList();
-
+    Console.WriteLine("<br/>");
     Console.WriteLine("Order by descending");
     Console.WriteLine("<br/>");
     foreach (var student3 in filteredResult)
