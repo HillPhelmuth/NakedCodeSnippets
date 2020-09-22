@@ -11,7 +11,7 @@ new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 }
 public void MainMethod()
 {
     // Order by ascending using .OrderBy. Lambda sets determines the property to order by
-    var studentsInAscOrder = studentList.OrderBy(s => s.StudentName).ToList();
+    var studentsInAscOrder = studentList.OrderBy(s => s.Age).ToList();
     Console.WriteLine("Order by ascending");
     Console.WriteLine("<br/>=============================================<br/>");
     foreach (var student2 in studentsInAscOrder)
