@@ -1,9 +1,4 @@
-﻿public class Student
-{
-    public int StudentID { get; set; }
-    public string StudentName { get; set; }
-    public int Age { get; set; }
-}
+﻿public class Student { public int StudentID { get; set; } public string StudentName { get; set; } public int Age { get; set; } }
 
 List<Student> studentList = new List<Student>() {
             new Student() { StudentID = 1, StudentName = "John", Age = 13},
