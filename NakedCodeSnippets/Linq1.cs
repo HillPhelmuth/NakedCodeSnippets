@@ -19,22 +19,23 @@ public void MainMethod()
     // Lambda expression must return boolean
     var filteredResult = studentList.Where(s => s.Age > 12 && s.Age < 20).ToList();
     Console.WriteLine("Filter using .Where()");
+    Console.WriteLine("<br/>");
     foreach (var student in filteredResult)
     {
         Console.WriteLine($"ID: {student.StudentID} Name: {student.StudentName} Age: {student.Age}");
     }
-
+Console.WriteLine("<br/>");
     // Filter object to the first result using a boolean filter
     var student1 = studentList.FirstOrDefault(x => x.StudentName == "John");
-    Console.WriteLine("=============================================\r\n");
+    Console.WriteLine("<br/>");
     Console.WriteLine("Filter object to the first result");
     Console.WriteLine("=============================================\r\n");
     Console.WriteLine($"ID: {student1.StudentID} Name: {student1.StudentName} Age: {student1.Age}");
-    Console.WriteLine("=============================================\r\n");
+    Console.WriteLine("<br/>");
     // Order by ascending using .OrderBy
     var studentsInAscOrder = studentList.OrderBy(s => s.StudentName).ToList();
     Console.WriteLine("Order by ascending");
-    Console.WriteLine("=============================================\r\n");
+Console.WriteLine("<br/>");
     foreach (var student2 in filteredResult)
     {
         Console.WriteLine($"ID: {student2.StudentID} Name: {student2.StudentName} Age: {student2.Age}");
@@ -44,7 +45,7 @@ public void MainMethod()
     var studentsInDescOrder = studentList.OrderByDescending(s => s.Age).ToList();
 
     Console.WriteLine("Order by descending");
-    Console.WriteLine("=============================================\r\n");
+    Console.WriteLine("<br/>");
     foreach (var student3 in filteredResult)
     {
         Console.WriteLine($"ID: {student3.StudentID} Name: {student3.StudentName} Age: {student3.Age}");
