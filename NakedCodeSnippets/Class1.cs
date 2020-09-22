@@ -21,7 +21,7 @@ namespace NakedCodeSnippets
             new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 }
         };
 
-        public void MainMethod()
+        public void MainMethod1()
         {
             // Filter objects using .Where. This will return all students Ages 13 - 19.
             // Lambda expression must return boolean
@@ -54,6 +54,19 @@ namespace NakedCodeSnippets
             {
                 Console.WriteLine($"ID: {student3.StudentID} Name: {student3.StudentName} Age: {student3.Age}");
             }
+
+            // Select a property to list using .Select()
+            var studentNames = studentList.Select(x => x.StudentName);
+            Console.WriteLine("Student names only");
+            foreach (string name in studentNames)
+            {
+                Console.WriteLine($"{name}");
+            }
+
+        }
+
+        public void MainMethod2()
+        {
 
         }
     }

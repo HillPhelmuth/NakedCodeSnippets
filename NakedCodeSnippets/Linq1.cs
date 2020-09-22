@@ -24,7 +24,7 @@ public void MainMethod()
     {
         Console.WriteLine($"ID: {student.StudentID} Name: {student.StudentName} Age: {student.Age}");
     }
-    Console.WriteLine("=============================================<br/>");
+    
     // Get the first result using a boolean filter
     var student1 = studentList.FirstOrDefault(x => x.StudentName == "John");
     Console.WriteLine("=============================================<br/>");
@@ -58,7 +58,7 @@ public void MainMethod()
     Console.WriteLine("=============================================<br/>");
     foreach (string name in studentNames)
     {
-        Console.WriteLine($"{name}");
+        Console.WriteLine($"{name}<br/>");
     }
 
 }
