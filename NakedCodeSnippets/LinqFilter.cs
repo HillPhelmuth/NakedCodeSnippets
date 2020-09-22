@@ -26,33 +26,15 @@ public void MainMethod()
     Console.WriteLine("<br/>=============================================<br/>");
     Console.WriteLine($"ID: {student1.StudentID} Name: {student1.StudentName} Age: {student1.Age}<br/>");
     Console.WriteLine("<br/>=============================================<br/>");
-    // Order by ascending using .OrderBy. Lambda sets determines the property to order by
-    var studentsInAscOrder = studentList.OrderBy(s => s.StudentName).ToList();
-    Console.WriteLine("Order by ascending");
-    Console.WriteLine("<br/>=============================================<br/>");
-    foreach (var student2 in studentsInAscOrder)
-    {
-        Console.WriteLine($"ID: {student2.StudentID} Name: {student2.StudentName} Age: {student2.Age}<br/>");
-    }
 
-    // Order by descending using .OrderByDescending
-    var studentsInDescOrder = studentList.OrderByDescending(s => s.Age).ToList();
+    //After filtering, Select a property to list using .Select()
+    var studentNames = studentList.Where(x => x.Age >= 18).Select(x => x.StudentName);
     Console.WriteLine("<br/>=============================================<br/>");
-    Console.WriteLine("Order by descending");
-    Console.WriteLine("<br/>=============================================<br/>");
-    foreach (var student3 in studentsInDescOrder)
-    {
-        Console.WriteLine($"ID: {student3.StudentID} Name: {student3.StudentName} Age: {student3.Age}<br/>");
-    }
-
-    // Select a property to list using .Select()
-    var studentNames = studentList.Select(x => x.StudentName);
-    Console.WriteLine("<br/>=============================================<br/>");
-    Console.WriteLine("Student names only");
+    Console.WriteLine("Adult students, names only using .Select");
     Console.WriteLine("<br/>=============================================<br/>");
     foreach (string name in studentNames)
     {
-        Console.WriteLine($"{name}<br/>");
+        Console.WriteLine($"{name}");
     }
 
 }
