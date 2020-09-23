@@ -8,7 +8,7 @@ new Student() { StudentID = 4, StudentName = "Ram" , Age = 20},
 new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 }
 };
 
-public void MainMethod4()
+public void DistinctAndExcept()
 {
     // Distinct Set
     var strList = new List<string>() { "One", "Two", "Three", "Two", "Three" };
@@ -37,3 +37,4 @@ public void MainMethod4()
         Console.WriteLine(str);
     Console.WriteLine("<br/>=============================================<br/>");
 }
+DistinctAndExcept();
